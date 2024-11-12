@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios </title>
+</head>
+<body>
+    <h1>Trabajando con formularios</h1>
+    <form action="#" method="post">
+        <fieldset>
+            <legend>
+                <h2>Registro de usuario - Ingrese sus datos</h2>
+            </legend>
+            <p>
+                <label for="name"> Nombre/s</label>
+                <input type="text" name="name" id="name" required minlength="3" maxlength="10">
+            </p>
+            <p>
+            <label for="lastname">Apellido</label>
+            <input type="text" name="lastname" id="lastname" placeholder="">
+            </p>
+            <p>
+            <label for="email">Correo Electronico </label>
+            <!-- condiciones regulares para validar los datos del campo de email en este caso es pattern y lo buscamos en la web-->
+            <input type="email" name="email" id="email" 
+            placeholder="usuario@cuenta.com" pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$">
+            </p>
+            <p>
+            <label for="phone">Telefono</label>
+            <input type="tel" name="phone" id="phone" placeholder="123-123-1234" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+            </p>
+            <p>
+            <label for="address">Direccion</label>
+            <input type="text" name="address" id="address">
+            </p>
+            <p>
+            <label for="codPos">Codigo Postal</label>
+            <input type="number" name="codPos" id="codPos">
+            </p>
+            <p>
+            <label for="date">Fecha de Nacimiento</label>
+            <input type="date" name="date" id="date">
+            </p>
+            <p>
+            <label for="nivel"> Nivel de Estudio</label>
+            <input type="radio" name="nivel" id="1">Primario
+            <input type="radio" name="nivel" id="2">Secundario
+            <input type="radio" name="nivel" id="3">Universitario
+            </p>
+            <p>
+            <label for="ocupacion">Ocupacion</label>
+            <select name="ocupacion" id="ocupacion">
+            <optgroup label="Estudia">
+            <option value="1">Desempleado</option>
+            <option value="2">Administrativo</option>
+            <option value="3">Docente</option>
+            </optgroup>
+            <optgroup label="Trabaja">
+            <option value="4">Desempleado</option>
+            <option value="5">Administrativo</option>
+            <option value="6">Docente</option>
+            </optgroup>
+            </select>
+            <select multiple="true">
+            <option value="1">Desempleado</option>
+            <option value="2">Administrativo</option>
+            <option value="3">Docente</option>
+            <option value="1">Desempleado</option>
+            <option value="2">Administrativo</option>
+            <option value="3">Docente</option>
+            </select>
+            </p>
+            <p>
+             <label for="conocimiento">Conocimiento en Programación</label>
+             <input type="checkbox" name="html" value="html" id="conocimiento">HTML 
+             <input type="checkbox" name="css" value="css" id="conocimiento">CSS 
+             <input type="checkbox" name="js" value="js" id="conocimiento">JS 
+            </p>
+            <p>
+            <label for="imagen">Foto de perfil</label>
+            <input type="file" name="imagen" id="imagen">
+            </p>
+            <p>
+            <label for="">Contraseña</label>
+            <input type="password" name="" id="">
+            </p>
+            <p>
+            <label for="">Descripción</label>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+            </p>
+            <p>
+                <input type="submit" value="Cargar información">
+                <input type="reset" value="Limpiar">
+            </p>
+        </fieldset>
+    </form>
+</body>
+</html>
